@@ -1,6 +1,6 @@
 # Crowdin SSO examples
 
-This is the collection for example integrations with Crowdin SSO. They are not supposed to be used on production.
+This is the collection of sample integrations with Crowdin SSO. The files from this repository are not supposed to be used on production.
 
 ## Documentation
 
