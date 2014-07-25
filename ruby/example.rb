@@ -21,8 +21,8 @@ require 'cgi'
 
 class CrowdinCustomSSO
   # Crowdin account credentials
-  CROWDIN_USER_LOGIN   = "W3RWOLF"     # your login name in Crowdin
-  CROWDIN_USER_API_KEY = "f2d41e481ae62f31c2874b640c1a058b"    # your account API key (can be found here https://crowdin.net/settings#api-key)
+  CROWDIN_USER_LOGIN   = " -- OWNERS LOGIN -- "     # your login name in Crowdin
+  CROWDIN_USER_API_KEY = " -- OWNERS API KEY -- "    # your account API key (can be found here https://crowdin.net/settings#api-key)
   CROWDIN_BASEPATH     = "http://crowdin.net/join"  # usually no need to change
 
   def get_sso_link
