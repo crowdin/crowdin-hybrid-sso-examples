@@ -4,7 +4,7 @@ This is the collection of sample integrations with Crowdin SSO. The files from t
 
 ## Documentation
 
-Further documentation on Crowdin SSO is available here (https://support.crowdin.net/for-project-managers/integration/hybrid-single-sign-on-integration/)
+Further documentation on Crowdin SSO is available here (https://support.crowdin.com/for-project-managers/integration/hybrid-single-sign-on-integration/)
 
 ## Contributing
 
