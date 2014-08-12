@@ -19,7 +19,7 @@ class crowdin_custom_sso {
   // Crowdin account credentials
   const CROWDIN_USER_LOGIN = ' -- OWNERS LOGIN -- ';      // your login name in Crowdin
   const CROWDIN_USER_API_KEY = ' -- OWNERS API KEY -- ';  // your account API key (can be found here https://crowdin.net/settings#api-key)
-  const CROWDIN_BASEPATH = 'https://crowdin.net/join';    // usually no need to change
+  const CROWDIN_BASEPATH = 'https://crowdin.com/join';    // usually no need to change
 
   private $cipher = MCRYPT_RIJNDAEL_128;
   private $mode = MCRYPT_MODE_CBC;
@@ -48,7 +48,7 @@ class crowdin_custom_sso {
       'role' => 0,
       'projects' => implode(',', array('docx-project', 'csv-project')),
       'expiration' => strtotime('+20 minutes'),
-      'redirect_to' => 'https://crowdin.net/project/docx-project'
+      'redirect_to' => 'https://crowdin.com/project/docx-project'
     );
   }
 
