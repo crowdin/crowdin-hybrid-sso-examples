@@ -31,7 +31,7 @@ def get_user_data(projects, registered):
     'expiration': mktime((datetime.datetime.now() + datetime.timedelta(minutes=20)).timetuple()),
     'languages': "uk,ro,fr",
     'role': 0,
-    'redirect_to': "https://crowdin.net/project/docx-project"
+    'redirect_to': "https://crowdin.com/project/docx-project"
   }
 
   return data;
@@ -49,7 +49,7 @@ def encrypt(data, api_key):
   base64enc = base64.b64encode(d)
   return urllib.pathname2url(base64enc)
 
-basepath = "https://crowdin.net/join"
+basepath = "https://crowdin.com/join"
 owner_login = " -- OWNERS LOGIN -- "
 api_key = " -- OWNERS API KEY -- "
 projects = ["docx-project", "csv-project"]
