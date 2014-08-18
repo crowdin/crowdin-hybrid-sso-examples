@@ -30,7 +30,7 @@ namespace test
   {
     public static void Main (string[] args)
     {
-      String basepath = "https://crowdin.net/join";
+      String basepath = "https://crowdin.com/join";
       String owner_login = " -- OWNERS LOGIN -- ";
       String api_key = " -- OWNERS API KEY -- ";
       string[] projects = new string[] {"docx-project", "csv-project"};
@@ -56,7 +56,7 @@ namespace test
 	{"expiration", ((DateTime.Now.AddMinutes(20).ToUniversalTime().Ticks - 621355968000000000)/10000000).ToString()},
 	{"role", "0"},
         {"languages", "uk,ro,fr"},
-	{"redirect_to", "https://crowdin.net/project/docx-project"}
+	{"redirect_to", "https://crowdin.com/project/docx-project"}
       };
 
       return data;

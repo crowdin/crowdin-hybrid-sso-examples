@@ -17,7 +17,7 @@
 function get_sso_link() {
   var CROWDIN_USER_API_KEY = ' -- OWNERS API KEY -- ';
   var CROWDIN_USER_LOGIN = ' -- OWNERS LOGIN -- ';
-  var CROWDIN_BASEPATH = 'https://crowdin.net/join';
+  var CROWDIN_BASEPATH = 'https://crowdin.com/join';
 
   var CROWDIN_LINK = CROWDIN_BASEPATH + '?h=' + encrypt(get_user_data(), CROWDIN_USER_API_KEY) + '&uid=' + CROWDIN_USER_LOGIN;
   
@@ -42,7 +42,7 @@ function get_user_data() {
     expiration: 20 * 60 + (timestamp / 1000),
     languages: "uk,ro,fr",
     role: 0,
-    redirect_to: "https://crowdin.net/project/docx-project"
+    redirect_to: "https://crowdin.com/project/docx-project"
   };
 }
 

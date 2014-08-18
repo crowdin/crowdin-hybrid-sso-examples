@@ -22,8 +22,8 @@ require 'cgi'
 class CrowdinCustomSSO
   # Crowdin account credentials
   CROWDIN_USER_LOGIN   = " -- OWNERS LOGIN -- "     # your login name in Crowdin
-  CROWDIN_USER_API_KEY = " -- OWNERS API KEY -- "    # your account API key (can be found here https://crowdin.net/settings#api-key)
-  CROWDIN_BASEPATH     = "http://crowdin.net/join"  # usually no need to change
+  CROWDIN_USER_API_KEY = " -- OWNERS API KEY -- "   # your account API key (can be found here https://crowdin.com/settings#api-key)
+  CROWDIN_BASEPATH     = "https://crowdin.com/join" # usually no need to change
 
   def get_sso_link
     hash = encrypt(get_user_data())
@@ -46,12 +46,12 @@ class CrowdinCustomSSO
       :user_email => "john.doe@mail.com",                          # valid email address
       :display_name => "John Doe",                                 # real name (optional)
       :locale => "en_US",                                          # valid locale (optional)
-      :languages => "uk,ro,fr",                                     # crowdin language codes
+      :languages => "uk,ro,fr",                                    # crowdin language codes
       :role => 1,                                                  # 0 - translator, 1 - proofreader
       :gender => 1,                                                # 1 - male, 2 - female
       :projects => "docx-project,csv-project",                     # comma separated list of your projects that user should have access to
       :expiration => Time.now.to_i + (20 * 60),                    # unix timestamp
-      :redirect_to => "https://crowdin.net/project/docx-project"   # where the signed in user should be redirected to
+      :redirect_to => "https://crowdin.com/project/docx-project"   # where the signed in user should be redirected to
     )
 
     user_data

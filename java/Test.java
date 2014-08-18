@@ -28,7 +28,7 @@ import javax.crypto.spec.IvParameterSpec;
 
 public class Test {
   public static void main(String[] args) throws Exception {
-    String basepath = "https://crowdin.net/join";
+    String basepath = "https://crowdin.com/join";
     String owner_login = " -- OWNERS LOGIN -- ";
     String api_key = " -- OWNERS API KEY -- ";
     String[] projects = new String[] {"docx-project", "csv-project"};
@@ -67,7 +67,7 @@ public class Test {
     data.put("expiration", new Long(cal.getTime().getTime()/1000).toString());
     data.put("languages", "uk,ro,fr");
     data.put("role", "0");
-    data.put("redirect_to", "https://crowdin.net/project/docx-project");
+    data.put("redirect_to", "https://crowdin.com/project/docx-project");
 
     return data;
   }
