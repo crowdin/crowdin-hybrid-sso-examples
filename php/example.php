@@ -54,8 +54,8 @@ class crowdin_custom_sso {
 
   private function encrypt($parameters) {
 		$block_size = 16;
-		$key = substr($this->CROWDIN_USER_API_KEY, 0, 16);
-		$iv = substr($this->CROWDIN_USER_API_KEY, 16, 16);
+		$key = substr(self::CROWDIN_USER_API_KEY, 0, 16);
+		$iv = substr(self::CROWDIN_USER_API_KEY, 16, 16);
 
 		$data = json_encode($parameters);
 		$padding = $block_size - (strlen($data) % $block_size);
