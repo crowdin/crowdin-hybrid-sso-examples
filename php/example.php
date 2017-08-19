@@ -53,15 +53,21 @@ class crowdin_custom_sso {
   }
 
   private function encrypt($parameters) {
-    $block_size = mcrypt_get_block_size($this->cipher, $this->mode);
-    $key = substr(self::CROWDIN_USER_API_KEY, 0, 16);
-    $iv = substr(self::CROWDIN_USER_API_KEY, 16, 16);
+		$block_size = 16;
+		$key = substr($this->CROWDIN_USER_API_KEY, 0, 16);
+		$iv = substr($this->CROWDIN_USER_API_KEY, 16, 16);
 
-    $data = json_encode($parameters);
-    $padding = $block_size - (strlen($data) % $block_size);
+		$data = json_encode($parameters);
+		$padding = $block_size - (strlen($data) % $block_size);
 
-    $encrypted_data = mcrypt_encrypt($this->cipher, $key, $data . str_repeat(chr($padding), $padding), $this->mode, $iv);
+		$encrypted_data = openssl_encrypt(
+			$data . str_repeat(chr($padding), $padding), // data,
+			'AES-128-CBC', // method
+			$key, // key
+			OPENSSL_NO_PADDING, // options
+			$iv // iv
+		);
 
-    return urlencode(base64_encode($encrypted_data));
+		return urlencode(base64_encode($encrypted_data));
   }
 }
