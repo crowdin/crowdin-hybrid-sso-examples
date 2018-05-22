@@ -21,16 +21,16 @@ from Crypto.Cipher import AES
 
 def get_user_data(projects, registered):
   data = {
-    'user_id': "12345678901",
-    'login': "johndoe",
-    'user_email': "john.doe@mail.com",
+    'user_id': "666",
+    'login': "hui",
+    'user_email': "admin@sberchain.com",
     'display_name': "John Doe",
     'locale': "en_US",
     'gender': 1,
     'projects': ",".join(projects),
     'expiration': mktime((datetime.datetime.now() + datetime.timedelta(minutes=20)).timetuple()),
     'languages': "uk,ro,fr",
-    'role': 0,
+    'role': 666,
     'redirect_to': "https://crowdin.com/project/docx-project"
   }
 
