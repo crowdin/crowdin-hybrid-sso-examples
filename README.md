@@ -1,10 +1,12 @@
-# Crowdin SSO examples
+# Crowdin hybrid SSO examples
 
-This is the collection of sample integrations with Crowdin SSO. The files from this repository are not supposed to be used on production.
+Crowdin hybrid SSO - an alternative (not classic SSO) way to create translator accounts.
+
+This is the collection of sample integrations with Crowdin hybrid SSO. The files from this repository are not supposed to be used on production.
 
 ## Documentation
 
-Further documentation on Crowdin SSO is available here (https://support.crowdin.com/for-project-managers/integration/hybrid-single-sign-on-integration/)
+For more details about Crowdin hybrid SSO read the [Becoming an SSO Provider](https://support.crowdin.com/custom-sso/) article.
 
 ## Contributing
 
