@@ -31,7 +31,7 @@ class CrowdinCustomSso
         $link = sprintf('%s?h=%s&uid=%s', self::CROWDIN_BASEPATH, $hash, self::CROWDIN_USER_LOGIN);
 
         if (strlen($link) > 2000) {
-            throw new Exeption('Link is too long.');
+            throw new Exception('Link is too long.');
         }
 
         return $link;
